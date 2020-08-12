@@ -19,7 +19,7 @@
 
 生成.msync 文件
 
-    msync -gen test.data > .msync.test.data
+    msync -gen new.data > .msync.new.data
 
 启动一个支持 range 的 http file server
 
@@ -27,7 +27,7 @@
 
 差分下载
 
-    curl http://127.0.0.1:8080/.msync.store.sql | ./msync -sync ~/store.sql -url http://127.0.0.1:8080/store.sql -o /tmp/store.sql
+    curl http://127.0.0.1:8080/.msync.new.data | ./msync -sync old.data -url http://127.0.0.1:8080/new.data -o down.data
 
 ## 其它参数
 
